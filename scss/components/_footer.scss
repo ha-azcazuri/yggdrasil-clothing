@@ -1,0 +1,148 @@
+@import "../abstracts/index";
+
+.footer {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: repeat(3, max-content);
+    justify-items: center;
+    align-items: center;
+    row-gap: 45px;
+    padding-top: 67px;
+    padding-bottom: 6px;
+    margin-top: 67px;
+    background-color: black;
+    color: white;
+
+    @include mq(tablet) {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 62px;
+    }
+
+    @include mq(desktop) {
+        margin-top: 86px;
+        grid-template-columns: 1fr 28% 1fr;
+        grid-template-rows: repeat(2, max-content);
+        row-gap: 86px;
+        padding-top: 86px;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        font-family: var(--ff-nav);
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-300);
+        text-transform: uppercase;
+        gap: 1.58333em;
+    }
+
+    &__link {
+        position: relative;
+    }
+
+    //underline animation on hover
+    &__link::before {
+        @extend .navbar__link::before;
+    }
+
+    &__link:hover::before {
+        @extend .navbar__link:hover::before;
+    }
+    ////////////
+
+    &__socials-container {
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        gap: .86666em;
+        align-items: center;
+
+        @include mq(tablet) {
+            font-size: 40px;
+        }
+
+        @include mq(desktop) {
+            flex-direction: row;
+        }
+    }
+
+    //icons scaling animation on hover
+    &__social-icon {
+        display: block;
+        transition: transform .6s;
+    }
+
+    &__social-icon:hover {
+        transform: scale(1.25, 1.25);
+    }
+    /////////////////
+
+    &__logo {
+        width: 55px;
+        height: 55px;
+        align-self: start;
+
+        @include mq(tablet) {
+            grid-area: 1 / 2 / span 1 / span 1;
+            width: 86px;
+            height: 86px;
+            align-self: auto;
+        }
+    }
+
+    &__secondary-nav span {
+        display: none;
+
+        @include mq(desktop) {
+            display: initial;
+        }
+    }
+
+    &__secondary-nav {
+        display: flex;
+        flex-direction: column;
+        font-family: var(--ff-nav);
+        font-size: var(--fs-200);
+        font-weight: var(--fw-light);
+        text-align: center;
+        gap: 1.58333em;
+
+        @include mq(tablet) {
+            grid-column: 1 / span 3;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        @include mq(desktop) {
+            display: initial;
+            grid-column: 3 / span 1;
+        }
+    }
+
+    &__secondary-link-wrapper {
+        @include mq(tablet) {
+            flex: 1;
+        }
+
+        @include mq(desktop) {
+            display: inline;
+        }
+    }
+
+    &__copyright {
+        grid-column: 1 / span 2;
+        font-family: var(--ff-nav);
+        font-size: var(--fs-200);
+        font-weight: var(--fw-light);
+
+        @include mq(tablet) {
+            grid-column: 1 / span 3;
+        }
+
+        @include mq(desktop) {
+            grid-area: 2 / 1 / span 1 / span 1;
+            justify-self: start;
+            padding-left: 36px;
+        }
+    }
+}

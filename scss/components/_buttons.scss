@@ -1,0 +1,23 @@
+@import "../abstracts/index";
+
+.btn {
+    display: block;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    width: min-content;
+    padding: .64286em 1.5em;
+    margin: auto;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-extrabold);
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform .6s, box-shadow .6s;
+
+    &:hover {
+        transform: scale(1.1, 1.1);
+        box-shadow: 0px 6px 20px 7px rgba(0,0,0,0.25);
+    }
+}

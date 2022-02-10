@@ -1,0 +1,11 @@
+@import "./breakpoints";
+
+//MEDIA QUERIES
+
+@mixin mq($mq) {
+    $size: map-get($breakpoints, $mq);
+
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}

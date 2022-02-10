@@ -1,0 +1,85 @@
+@import "../abstracts/index";
+
+//ITEM CARDS
+
+.card-item {
+    width: 300px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 4px;
+
+    &__title {
+        font-size: 1.4rem;
+    }
+
+    &__line-break {
+        border: 1px solid rgb(109, 109, 109);
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__price {
+        font-family: var(--ff-nav);
+        font-size: 1.45rem;
+        font-weight: var(--fw-bold);
+        margin: 6px 0;
+    }
+
+    & img {
+        background-color: rgb(221, 221, 221);
+    }
+}
+
+//INSTRUCTIONS CARDS
+
+.card-instructions {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(109, 109, 109);
+    border-radius: 4px;
+    gap: 20px;
+
+    &--reversed-content {
+        text-align: right;
+        flex-direction: row-reverse;
+    }
+
+    &__img {
+        background-color: rgb(241, 241, 241);
+        width: auto;
+        height: 100%;
+    }
+
+    &__heading {
+        font-size: var(--fs-400);
+    }
+
+    &__text {
+        font-size: var(--fs-200);
+    }
+}
+
+//MEMBER CARDS
+
+.card-member {
+    width: 250px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 3px;
+
+    &__name {
+        font-size: var(--fs-400);
+        margin: 2px 0;
+    }
+
+    &__line-break {
+        border: 1px solid rgb(109, 109, 109);
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__role {
+        font-size: var(--fs-300);
+        margin: 4px 0;
+    }
+}

@@ -1,0 +1,40 @@
+@import "../abstracts/index";
+
+.grid-body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: min-content auto min-content;
+}
+
+.pnf {
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 35px;
+    justify-content: center;
+    height: 100%;
+
+    @include mq(tablet) {
+        padding: 0 58px;
+        gap: 20px;
+    }
+
+    &__title {
+        font-family: var(--ff-title);
+        font-size: 4.75rem;
+        font-weight: var(--fw-bold);
+
+        @include mq(tablet-sm) {
+            font-size: 6.3125rem;
+        }
+    }
+
+    &__subtitle {
+        font-family: var(--ff-subtitle);
+        font-size: 1.5rem;
+        font-weight: var(--fw-regular);
+
+        @include mq(tablet-sm) {
+            font-size: 2rem;
+        }
+    }
+}

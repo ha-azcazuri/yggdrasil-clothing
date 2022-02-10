@@ -1,0 +1,154 @@
+@import "../abstracts/index";
+
+////////HERO SECTION
+
+//hero__slide + main-header = 100vh; hero__slide - navbar; result is hero section taking 100vh always without losing proportions
+
+.hero {
+    box-shadow: var(--shadow-body);
+
+    &__slide {
+        background-image: url("../img/hero-img.jpg");
+        height: calc(78.44vh - 152px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include mq(desktop) {
+            height: calc(78.44vh - 112px);
+        }
+    }
+}
+
+/////////PRESENTATION
+
+.presentation {
+    margin: 67px 0;
+
+    @include mq(desktop) {
+        margin: 86px 0;
+    }
+
+    &__heading {
+        font-size: var(--fs-700);
+        font-weight: var(--fw-bold);
+
+        @include mq(tablet) {
+            margin-bottom: 27px;
+        }
+    }
+
+    &__heading,
+    &__text {
+        margin: 27px auto;
+        width: 80.6%;
+
+        @include mq(tablet) {
+            margin: 0;
+            width: auto;
+        }
+    }
+
+    &__container-top,
+    &__container-bottom {
+        @include mq(tablet) {
+            display: flex;
+            gap: 27px;
+            padding: 0 58px;
+            align-items: center;
+        }
+
+        @include mq(desktop) {
+            padding: 0 86px;
+        }
+    }
+
+    &__container-top {
+        @include mq(tablet) {
+            margin-bottom: 122px;
+        }
+
+        @include mq(desktop) {
+            margin-bottom: 108px;
+        }
+    }
+
+    &__container-bottom {
+        @include mq(tablet) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__img {
+        @include mq(tablet) {
+            width: 288px;
+            border-radius: 4px;
+        }
+
+        @include mq(desktop) {
+            width: 304px;
+        }
+    }
+
+    &__text-container {
+        @include mq(tablet) {
+            max-width: 474px;
+        }
+    }
+}
+
+/////////////TESTIMONIES
+
+.testimonies {
+    padding: 60px 50px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-body);
+    font-size: var(--fs-200);
+    font-style: italic;
+    margin: 67px 0;
+
+    @include mq(tablet) {
+        padding: 60px 90px;
+        justify-content: space-around;
+    }
+
+    @include mq(desktop) {
+        padding: 60px 182px;
+    }
+
+    &__quote-container {
+        width: 260px;
+    }
+
+    &__quote-footer {
+        margin-top: .63636em;
+    }
+
+    &__quote-container:nth-child(2) {
+        @include mq(tablet) {
+            display: initial;
+        }
+    }
+
+    &__quote-container:nth-child(3) {
+        @include mq(desktop) {
+            display: initial;
+        }
+    }
+}
+
+///////////CALL TO ACTION HOME
+
+.cta-home {
+    margin: 67px 0;
+
+    @include mq(desktop) {
+        margin: 86px 0;
+    }
+
+    &__text {
+        font-size: var(--fs-400);
+        margin-bottom: 28px;
+    }
+}

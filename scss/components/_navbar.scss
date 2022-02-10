@@ -1,0 +1,118 @@
+@import "../abstracts/index";
+
+header {
+    position: sticky;
+    top: -82px;
+    transform: translateY(-100%);
+    animation-name: slideInFromTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+    @keyframes slideInFromTop {
+        0%{
+            transform: translateY(-100%);
+        }
+    
+        100%{
+            transform: translateY(0%);
+        }
+    }
+
+    @include mq(tablet) {
+        top: 0px;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    box-shadow: var(--shadow-body);
+    padding: 13px 8.89% 16px 8.89%;
+    margin-bottom: 24px;
+
+    @include mq(tablet) {
+        flex-direction: row;
+        padding: 21px 49px 21px 94px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @include mq(desktop) {
+        padding: 8px 73px 8px 127px;
+    }
+
+    &__logo-wrapper {
+        width: 55px;
+        height: 55px;
+        margin: 0 auto 30px auto;
+
+        @include mq(tablet) {
+            width: 86px;
+            height: 86px;
+            margin: 0;
+        }
+
+        @include mq(desktop) {
+            width: 72px;
+            height: 72px;
+        }
+    }
+
+    &__links-container {
+        display: flex;
+        justify-content: space-between;
+        font-family: var(--ff-nav);
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-300);
+        text-transform: uppercase;
+
+        @include mq(tablet) {
+            width: 383px;
+        }
+
+        @include mq(desktop) {
+            width: 472px;
+        }
+    }
+
+    &__link {
+        //underline animation on hover; used on footer nav too
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            z-index: 10;
+            background-color: white;
+            width: 0%;
+            height: .1875em;
+            transition: width .6s ease-out;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+        ///////////////////////////
+
+        //static underline for active page
+        &--active {
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0%;
+                top: 100%;
+                z-index: 10;
+                background-color: white;
+                width: 100%;
+                height: .1875em;
+            }
+
+            &:hover::after {
+                display: none;
+            }
+        }
+        /////////////////////////
+    }
+}

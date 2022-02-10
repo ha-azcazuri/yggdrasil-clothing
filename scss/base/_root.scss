@@ -1,0 +1,34 @@
+@import "../abstracts/index";
+
+:root {
+    //FONT-FAMILY
+    --ff-body: "Martel", serif;
+    --ff-nav: "Lato", sans-serif;
+    --ff-title: "Cormorant SC", serif;
+    --ff-subtitle: "Cormorant Upright", serif;
+
+    //FONT-SIZE
+    @each $screen-size, $scales in $type-scales {
+        @if $screen-size == mobile {
+            @each $scale, $fs in $scales {
+                --fs-#{$scale}: #{$fs};
+            }
+        } @else {
+            @include mq(tablet-sm) {
+                @each $scale, $fs in $scales {
+                    --fs-#{$scale}: #{$fs};
+                }
+            }
+        }
+    }
+
+    //FONT-WEIGHT
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    //BOX-SHADOW
+    --shadow-body: 0px 6px 20px 0px rgba(0,0,0,0.25);
+}

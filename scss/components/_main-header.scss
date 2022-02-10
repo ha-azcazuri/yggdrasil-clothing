@@ -1,0 +1,30 @@
+@import "../abstracts/index";
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--hero-height {
+        height: 21.56vh;
+    }
+
+    &--padding {
+        padding: 44px 0 82px 0;
+    }
+
+    &__title {
+        font-family: var(--ff-title);
+        font-size: var(--fs-900);
+        font-weight: var(--fw-medium);
+        letter-spacing: .12em;
+        margin-bottom: 4px;
+    }
+
+    &__subtitle {
+        font-family: var(--ff-subtitle);
+        font-size: var(--fs-700);
+        font-weight: var(--fw-regular);
+    }
+}

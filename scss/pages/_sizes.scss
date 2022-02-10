@@ -1,0 +1,39 @@
+@import "../abstracts/index";
+
+//////////SIZE CHART
+
+.size-chart {
+    margin: 60px auto;
+    font-family: var(--ff-nav);
+    text-align: center;
+    font-size: var(--fs-400);
+    border-collapse: collapse;
+
+    & td,
+    & th {
+        border: 2px solid black;
+        padding: 6px 28px;
+    }
+
+    & th {
+        background-color: black;
+        color: white;
+    }
+}
+
+//////////SIZE INSTRUCTIONS
+
+.size-instructions {
+    &__text {
+        margin: 100px 0 50px 0;
+        text-align: center;
+        font-size: var(--fs-400);
+    }
+
+    &__instructions-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        margin: auto;
+        max-width: 1200px;
+    }
+}

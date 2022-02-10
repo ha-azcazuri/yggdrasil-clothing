@@ -1,0 +1,47 @@
+@import "../abstracts/index";
+
+//CONTACT FORM
+.form-contact {
+    width: 750px;
+    margin: 60px auto;
+
+    &__text-inputs-container {
+        display: flex;
+        min-height: 420px;
+    }
+
+    &__group {
+        width: 80%;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        padding: 12px 8px;
+        margin-top: 6px;
+        font-family: inherit;
+        font-size: inherit;
+        border: 2px solid black;
+        border-radius: 3px;
+
+        &--textarea-size {
+            resize: none;
+            height: 276px;
+        }
+    }
+
+    &__checkbox-container {
+        margin: 35px 0;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
+.formLeft,
+.formRight {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

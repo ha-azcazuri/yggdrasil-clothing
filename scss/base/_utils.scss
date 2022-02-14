@@ -32,5 +32,11 @@
 
     &--catalog-margins {
         margin-top: 90px;
+        margin-bottom: 50px;
+
+        @include mq(tablet) {
+            margin-top: 126px;
+            margin-bottom: 80px;
+        }
     }
 }

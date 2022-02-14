@@ -11,7 +11,12 @@
     }
 
     &--padding {
-        padding: 44px 0 82px 0;
+        padding-top: 44px;
+        padding-bottom: 60px;
+
+        @include mq(tablet) {
+            padding-bottom: 82px;
+        }
     }
 
     &__title {

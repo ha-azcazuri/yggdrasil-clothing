@@ -1,7 +1,15 @@
 .banner {
     background-image: url(../../img/banner-img.jpg);
-    height: 200px;
+    height: 80px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include mq(tablet) {
+        height: 134px;
+    }
+
+    @include mq(desktop) {
+        height: 176px;
+    }
 }

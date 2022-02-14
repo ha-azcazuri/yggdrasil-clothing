@@ -4,17 +4,31 @@
 
 .cta-catalog__text {
     text-align: center;
-    margin: 52px 0 26px 0;
+    padding: 0 35px;
+    margin-bottom: 28px;
     font-size: var(--fs-400);
+
+    @include mq(tablet) {
+        padding: 0 58px;
+    }
 }
 
 /* ITEMS SECTION */
 
 .items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 60px;
-    margin: 140px 0;
-    padding: 0 100px;
+    display: grid;
+    grid-template-columns: min-content;
+    width: min-content;
+    margin: auto;
+    row-gap: 50px;
+
+    @include mq(tablet) {
+        grid-template-columns: repeat(2, min-content);
+        row-gap: 80px;
+        column-gap: 112px;
+    }
+
+    @include mq(desktop) {
+        grid-template-columns: repeat(3, min-content);
+    }
 }

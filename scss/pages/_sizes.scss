@@ -3,21 +3,32 @@
 //////////SIZE CHART
 
 .size-chart {
-    margin: 60px auto;
+    margin: auto;
     font-family: var(--ff-nav);
     text-align: center;
     font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
     border-collapse: collapse;
 
     & td,
     & th {
-        border: 2px solid black;
-        padding: 6px 28px;
+        border: 2px solid #000000;
+        padding: 6px 6px;
+
+        @include mq(tablet-sm) {
+            padding: 6px 12px;
+        }
+
+        @include mq(tablet) {
+            padding: 6px 28px;
+            border: 3px solid #000000;
+        }
     }
 
     & th {
-        background-color: black;
-        color: white;
+        font-weight: var(--fw-regular);
+        background-color: #000000;
+        color: #ffffff;
     }
 }
 
@@ -25,16 +36,30 @@
 
 .size-instructions {
     &__text {
-        margin: 100px 0 50px 0;
+        margin: 60px 0 45px 0;
         text-align: center;
-        font-size: var(--fs-400);
+        padding: 0 35px;
+
+        @include mq(tablet) {
+            margin: 82px 0 67px 0;
+            padding: 0 58px;
+        }
     }
 
     &__instructions-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 60px;
+        grid-template-columns: min-content;
+        row-gap: 45px;
         margin: auto;
-        max-width: 1200px;
+        width: min-content;
+
+        @include mq(tablet) {
+            row-gap: 67px;
+        }
+
+        @include mq(desktop) {
+            grid-template-columns: repeat(2, min-content);
+            column-gap: 112px;
+        }
     }
 }

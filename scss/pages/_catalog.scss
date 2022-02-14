@@ -3,6 +3,7 @@
 /* CALL TO ACTION CATALOG */
 
 .cta-catalog__text {
+    text-align: center;
     margin: 52px 0 26px 0;
     font-size: var(--fs-400);
 }
@@ -10,6 +11,7 @@
 /* ITEMS SECTION */
 
 .items {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 60px;

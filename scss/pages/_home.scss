@@ -9,10 +9,18 @@
 
     &__slide {
         background-image: url("../img/hero-img.jpg");
-        height: calc(78.44vh - 152px);
+        height: calc(78.44vh - 153px);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @include mq(tablet-sm) {
+            height: calc(78.44vh - 157px);
+        }
+
+        @include mq(tablet) {
+            height: calc(78.44vh - 152px);
+        }
 
         @include mq(desktop) {
             height: calc(78.44vh - 112px);
@@ -51,6 +59,9 @@
 
     &__container-top,
     &__container-bottom {
+        position: relative;
+        z-index: -10; //takes containers to the back so they are not visible over navbar (caused by AOS)
+
         @include mq(tablet) {
             display: flex;
             gap: 27px;
@@ -94,12 +105,17 @@
         @include mq(tablet) {
             max-width: 474px;
         }
+
+        &--text-right {
+            text-align: right;
+        }
     }
 }
 
 /////////////TESTIMONIES
 
 .testimonies {
+    display: flex;
     padding: 60px 50px;
     justify-content: center;
     align-items: center;
@@ -122,16 +138,21 @@
     }
 
     &__quote-footer {
+        text-align: right;
         margin-top: .63636em;
     }
 
     &__quote-container:nth-child(2) {
+        display: none;
+
         @include mq(tablet) {
             display: initial;
         }
     }
 
     &__quote-container:nth-child(3) {
+        display: none;
+
         @include mq(desktop) {
             display: initial;
         }
@@ -148,6 +169,7 @@
     }
 
     &__text {
+        text-align: center;
         font-size: var(--fs-400);
         margin-bottom: 28px;
     }

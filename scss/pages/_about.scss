@@ -2,12 +2,14 @@
 
 .about__text {
     font-size: var(--fs-400);
+    text-align: center;
     width: 80%;
     max-width: 1200px;
     margin: auto;
 }
 
 .members {
+    display: flex;
     flex-wrap: wrap;
     width: 700px;
     justify-content: space-around;

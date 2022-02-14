@@ -79,6 +79,8 @@ header {
     }
 
     &__link {
+        position: relative;
+
         //underline animation on hover; used on footer nav too
         &::before {
             content: "";

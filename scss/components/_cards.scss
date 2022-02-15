@@ -1,36 +1,90 @@
 @import "../abstracts/index";
 
-//ITEM CARDS
+///////////////////ITEM CARDS
 
 .card-item {
-    width: 300px;
-    text-align: center;
-    border: 3px solid black;
+    width: 320px;
+    height: 148px;
+    border: 2px solid #c2c2c2;
     border-radius: 4px;
+    display: flex;
 
-    &__title {
-        font-size: 1.4rem;
+    @include mq(tablet) {
+        width: 217px;
+        height: 340px;
+        border: 3px solid #c2c2c2;
+        flex-direction: column;
+    }
+
+    @include mq(desktop-sm) {
+        width: 296px;
+        height: 457px;
+    }
+
+    &__carousel-wrapper {
+        background-color: #c2c2c2;
+        width: 118px;
+        display: flex;
+        align-items: center;
+
+        @include mq(tablet) {
+            width: auto;
+            height: 213px;
+            justify-content: center;
+        }
+
+        @include mq(desktop-sm) {
+            height: 290px;
+        }
+    }
+
+    &__body {
+        width: 202px;
+
+        @include mq(tablet) {
+            width: auto;
+            height: 127px;
+        }
+
+        @include mq(desktop-sm) {
+            height: 167px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+    }
+
+    &__title,
+    &__price {
+        font-size: 1.25rem;
+        font-weight: var(--fw-bold);
+        padding: 0 11px;
+        line-height: 112%;
+
+        @include mq(tablet) {
+            padding: 0 24px;
+        }
+
+        @include mq(desktop-sm) {
+            font-size: var(--fs-700);
+        }
     }
 
     &__line-break {
-        border: 1px solid rgb(109, 109, 109);
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    &__price {
-        font-family: var(--ff-nav);
-        font-size: 1.45rem;
-        font-weight: var(--fw-bold);
-        margin: 6px 0;
-    }
-
-    & img {
-        background-color: rgb(221, 221, 221);
+        width: 75%;
+        height: 2px;
+        background-color: #EBEBEB;
+        margin: 11px 0;
     }
 }
 
-//INSTRUCTIONS CARDS
+/////////////////////INSTRUCTIONS CARDS
 
 .card-instructions {
     display: flex;
@@ -59,7 +113,7 @@
     }
 }
 
-//MEMBER CARDS
+////////////////////////MEMBER CARDS
 
 .card-member {
     width: 250px;

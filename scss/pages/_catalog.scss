@@ -30,5 +30,6 @@
 
     @include mq(desktop) {
         grid-template-columns: repeat(3, min-content);
+        gap: 80px;
     }
 }

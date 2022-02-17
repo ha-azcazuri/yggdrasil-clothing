@@ -3,13 +3,14 @@
 header {
     position: sticky;
     top: -82px;
+    z-index: 1000;
     transform: translateY(-100%);
-    animation-name: slideInFromTop;
+    animation-name: slide-in-from-top;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 
-    @keyframes slideInFromTop {
+    @keyframes slide-in-from-top {
         0%{
             transform: translateY(-100%);
         }

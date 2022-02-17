@@ -59,9 +59,6 @@
 
     &__container-top,
     &__container-bottom {
-        position: relative;
-        z-index: -10; //takes containers to the back so they are not visible over navbar (caused by AOS)
-
         @include mq(tablet) {
             display: flex;
             gap: 27px;

@@ -3,7 +3,8 @@
 .about__text {
     text-align: center;
     padding: 0 35px;
-    margin-bottom: 76px;
+    margin: 0 auto 76px;
+    max-width: 1200px;
 
     @include mq(tablet) {
         padding: 0 58px;

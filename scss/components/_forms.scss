@@ -2,46 +2,75 @@
 
 //CONTACT FORM
 .form-contact {
-    width: 750px;
-    margin: 60px auto;
-
     &__text-inputs-container {
         display: flex;
-        min-height: 420px;
+        flex-direction: column;
+        gap: 28px;
+        align-items: center;
+
+        @include mq(tablet-sm) {
+            gap: 38px;
+        }
+
+        @include mq(tablet) {
+            flex-direction: row;
+            gap: 52px;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        @include mq(desktop-sm) {
+            gap: 100px;
+        }
     }
 
-    &__group {
-        width: 80%;
+    &__column {
+        width: 290px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        @include mq(tablet-sm) {
+            width: 300px;
+            gap: 38px;
+        }
     }
 
     &__input {
         display: block;
         width: 100%;
-        padding: 12px 8px;
-        margin-top: 6px;
+        padding: 8px 12px;
+        margin-top: 4px;
         font-family: inherit;
-        font-size: inherit;
+        font-size: var(--fs-400);
         border: 2px solid black;
-        border-radius: 3px;
+        border-radius: 4px;
+
+        @include mq(tablet-sm) {
+            padding: 10px 15px;
+            font-size: var(--fs-300);
+        }
 
         &--textarea-size {
             resize: none;
-            height: 276px;
+            height: 242px;
+
+            @include mq(tablet-sm) {
+                height: 299px;
+            }
         }
     }
 
     &__checkbox-container {
-        margin: 35px 0;
+        font-size: var(--fs-300);
+        margin: 56px auto 36px;
+        width: fit-content;
+        padding: 0 35px;
         text-align: center;
-        font-size: 0.9rem;
-    }
-}
 
-.formLeft,
-.formRight {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+        @include mq(tablet-sm) {
+            margin: 74px auto 54px;
+            padding: 0 58px;
+        }
+    }
 }

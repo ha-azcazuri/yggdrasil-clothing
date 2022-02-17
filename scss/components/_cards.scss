@@ -8,6 +8,7 @@
     border: 2px solid #c2c2c2;
     border-radius: 4px;
     display: flex;
+    overflow: hidden;
 
     @include mq(tablet-sm) {
         width: 217px;
@@ -48,6 +49,35 @@
 
         @include mq(desktop-sm) {
             height: 167px;
+
+            &:hover {
+                animation-name: card-item-hover;
+                animation-duration: .75s;
+                animation-fill-mode: forwards;
+        
+                @keyframes card-item-hover {
+                    0%{
+                        box-shadow: -4px 0 0 0 rgba(0, 0, 0, 0.1) inset;
+                    }
+        
+                    17%{
+                        box-shadow: 0 -4px 0 0 rgba(0, 0, 0, 0.1) inset;
+                    }
+        
+                    33%{
+                        box-shadow: 4px 0 0 0 rgba(0, 0, 0, 0.1) inset;
+                    }
+        
+                    50%{
+                        box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1) inset;
+                        transform: scale(1);
+                    }
+        
+                    100%{
+                        transform: scale(1.05);
+                    }
+                }
+            }
         }
     }
 
@@ -82,30 +112,54 @@
         background-color: #EBEBEB;
         margin: 11px 0;
     }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        cursor: pointer;
+    }
 }
 
 /////////////////////INSTRUCTIONS CARDS
 
 .card-instructions {
+    width: 320px;
+    height: 147px;
     display: flex;
-    align-items: center;
-    border: 2px solid rgb(109, 109, 109);
+    border: 2px solid #EBEBEB;
     border-radius: 4px;
-    gap: 20px;
+
+    @include mq(tablet-sm) {
+        width: 435px;
+        height: 200px;
+        border: 3px solid #EBEBEB;
+    }
 
     &--reversed-content {
-        text-align: right;
         flex-direction: row-reverse;
+        text-align: right;
     }
 
     &__img {
-        background-color: rgb(241, 241, 241);
-        width: auto;
         height: 100%;
+        width: auto;
+        background-color: #EBEBEB;
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px;
+
+        @include mq(tablet-sm) {
+            padding: 0 13px;
+        }
     }
 
     &__heading {
         font-size: var(--fs-400);
+        font-weight: var(--fw-regular);
+        margin-bottom: 7px;
     }
 
     &__text {
@@ -116,24 +170,46 @@
 ////////////////////////MEMBER CARDS
 
 .card-member {
-    width: 250px;
-    text-align: center;
-    border: 3px solid black;
-    border-radius: 3px;
+    width: 186px;
+    height: 258px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #EBEBEB;
+    border-radius: 4px;
+
+    @include mq(tablet-sm) {
+        width: 216px;
+        height: 321px;
+        border: 3px solid #EBEBEB;
+    }
+
+    &__img {
+        border-radius: 2px 2px 0 0;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
 
     &__name {
         font-size: var(--fs-400);
-        margin: 2px 0;
+        font-weight: var(--fw-regular);
+        padding: 0 10px;
     }
 
     &__line-break {
-        border: 1px solid rgb(109, 109, 109);
-        width: 80%;
-        margin: 0 auto;
+        height: 2px;
+        width: 75%;
+        background-color: #EBEBEB;
+        margin: 4px 0;
     }
 
     &__role {
         font-size: var(--fs-300);
-        margin: 4px 0;
+        padding: 0 10px;
     }
 }

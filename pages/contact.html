@@ -59,7 +59,7 @@
             <!-- --------------------------- CONTACT FORM ------------------------  -->
             <form class="form-contact" action="" method="get" enctype="text/plain">
                 <div class="form-contact__text-inputs-container">
-                    <div class="formLeft">
+                    <div class="form-contact__column">
                         <div class="form-contact__group">
                             <label class="form-contact__label" for="first-name">Fist Name</label>
                             <input class="form-contact__input" id="first-name" type="text" name="first-name" placeholder="Enter your first name" required>
@@ -81,7 +81,7 @@
                         </div>   
                     </div>
                     
-                    <div class="formRight">
+                    <div class="form-contact__column">
                         <div class="form-contact__group">
                             <label class="form-contact__label" for="topic">Topic</label>
                             <select class="form-contact__input" id="topic" name="topic" required>
@@ -102,9 +102,8 @@
                 </div>
 
                 <div class="form-contact__checkbox-container">
-                    <label for="newsletter">
-                        <input id="newsletter" type="checkbox" name="newsletter" value="yes" checked> Stay up to date by subscribing to our Newsletter
-                    </label>
+                    <input id="newsletter" type="checkbox" name="newsletter" value="yes" checked>
+                    <label for="newsletter">Stay up to date by subscribing to our Newsletter</label>
                 </div>
 
                 <button class="btn" type="submit">Send</button>

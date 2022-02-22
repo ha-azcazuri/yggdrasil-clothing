@@ -3430,9 +3430,6 @@ body {
   .desktop-content {
     display: initial; } }
 
-.light-text {
-  color: #6d6d6d; }
-
 .page-header {
   font-size: var(--fs-700);
   font-weight: var(--fw-bold);
@@ -3896,7 +3893,8 @@ header {
   .main-header__subtitle {
     font-family: var(--ff-subtitle);
     font-size: var(--fs-700);
-    font-weight: var(--fw-regular); }
+    font-weight: var(--fw-regular);
+    color: #5A5A5A; }
 
 .modal-dialog-centered {
   justify-content: center; }

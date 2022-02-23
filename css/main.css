@@ -3917,28 +3917,39 @@ header {
     width: 28px;
     height: 28px;
     position: absolute;
-    top: -35px;
-    right: 0;
+    top: 2px;
+    right: 4px;
+    z-index: 2000;
     cursor: pointer;
     transition: transform .5s; }
+    @media screen and (min-width: 576px) {
+      .modal-content .btn-close-modal {
+        top: -35px;
+        right: 0; } }
     .modal-content .btn-close-modal::after {
       content: "";
       position: absolute;
       right: 0;
-      background-color: white;
+      background-color: #444444;
       height: 3px;
       width: 100%;
       transform: rotate(45deg);
       border-radius: 2px; }
+      @media screen and (min-width: 576px) {
+        .modal-content .btn-close-modal::after {
+          background-color: white; } }
     .modal-content .btn-close-modal::before {
       content: "";
       position: absolute;
       right: 0;
-      background-color: white;
+      background-color: #444444;
       height: 3px;
       width: 100%;
       transform: rotate(-45deg);
       border-radius: 2px; }
+      @media screen and (min-width: 576px) {
+        .modal-content .btn-close-modal::before {
+          background-color: white; } }
     .modal-content .btn-close-modal:hover {
       transform: rotate(180deg); }
 

@@ -3600,23 +3600,10 @@ header {
         height: 127px; } }
     @media screen and (min-width: 992px) {
       .card-item__body {
-        height: 167px; }
+        height: 167px;
+        transition: transform .5s ease-in-out; }
         .card-item__body:hover {
-          animation-name: card-item-hover;
-          animation-duration: .75s;
-          animation-fill-mode: forwards; }
-      @keyframes card-item-hover {
-        0% {
-          box-shadow: -4px 0 0 0 rgba(0, 0, 0, 0.1) inset; }
-        17% {
-          box-shadow: 0 -4px 0 0 rgba(0, 0, 0, 0.1) inset; }
-        33% {
-          box-shadow: 4px 0 0 0 rgba(0, 0, 0, 0.1) inset; }
-        50% {
-          box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1) inset;
-          transform: scale(1); }
-        100% {
-          transform: scale(1.05); } } }
+          transform: scale(1.05); } }
   .card-item__text {
     display: flex;
     flex-direction: column;
